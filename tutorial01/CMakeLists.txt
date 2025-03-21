@@ -1,4 +1,5 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 2.6...4.0)
+#set (CMAKE_C_COMPILER "C:/msys64/mingw64/bin/gcc.exe")
 project (leptjson_test C)
 
 if (CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
