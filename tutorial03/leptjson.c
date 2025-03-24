@@ -102,7 +102,22 @@ static int lept_parse_string(lept_context* c, lept_value* v) {
             case '\0':
                 c->top = head;
                 return LEPT_PARSE_MISS_QUOTATION_MARK;
+            case '\\':
+                switch(*p++){
+                    case '\"': PUTC(c,'\"');
+                    case '\\': PUTC(c,'\\');
+                    case '/': PUTC(c,'/');
+                    case 'b': PUTC(c,'\b');
+                    case 'f': PUTC(c,'\f');
+                    case 'n': PUTC(c,'\n');
+                    case 'r': PUTC(c,'\r');
+                    case 't': PUTC(c,'\t');
+                    default: c->top=head;return LEPT_PARSE_INVALID_STRING_ESCAPE;
+                }break;
             default:
+                if((unsigned char)ch <0x20){
+                    c->top=head;return LEPT_PARSE_INVALID_STRING_CHAR;
+                }
                 PUTC(c, ch);
         }
     }

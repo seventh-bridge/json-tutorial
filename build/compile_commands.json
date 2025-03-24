@@ -1,0 +1,14 @@
+[
+{
+  "directory": "E:/VSCODE/json-tutorial/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe    -ansi -pedantic -Wall -g -o CMakeFiles\\leptjson.dir\\leptjson.c.obj -c E:\\VSCODE\\json-tutorial\\tutorial01\\leptjson.c",
+  "file": "E:/VSCODE/json-tutorial/tutorial01/leptjson.c",
+  "output": "CMakeFiles/leptjson.dir/leptjson.c.obj"
+},
+{
+  "directory": "E:/VSCODE/json-tutorial/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe    -ansi -pedantic -Wall -g -o CMakeFiles\\leptjson_test.dir\\test.c.obj -c E:\\VSCODE\\json-tutorial\\tutorial01\\test.c",
+  "file": "E:/VSCODE/json-tutorial/tutorial01/test.c",
+  "output": "CMakeFiles/leptjson_test.dir/test.c.obj"
+}
+]
